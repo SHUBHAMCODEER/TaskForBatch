@@ -15,3 +15,19 @@
 */
 
 /* Write your CSS here */
+/* 1. */
+.profile-card{
+   border: 5px dotted orange;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1rem;
+   margin: 2rem;
+}
+
+/* 2. */
+  #highlighted {
+     color:black;
+     background-color: orange;
+     font-size:medium;
+   }
