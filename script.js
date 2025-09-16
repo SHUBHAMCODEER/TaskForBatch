@@ -3,51 +3,72 @@
 // =========================
 
 // 1. Change age using getElementById
- let Myage = document.getElementById("user-age");
- Myage.innerText = 20;
- 
+let age = document.getElementById("age");
+age.textContent = 23;
+
 // 2. Change name color using getElementsByClassName
-let NameColor = document.getElementsByClassName("username");
-NameColor[0].style.color = "orange" ;
+let name = document.getElementsByClassName("username");
+name[0].style.color = "blue";
 
 // 3. Update all hobbies using getElementsByTagName
- let changeHobby = document.getElementsByTagName('li');
- changeHobby[0].innerText = "Reading Book";
- changeHobby[1].innerText = "Singing";
- changeHobby[2].innerText = "Watching Movies";
+let changeHobby = document.getElementsByTagName("li");
+changeHobby[0].innerText = "Cooking";
+changeHobby[1].innerText = "Singing";
+changeHobby[2].innerText = "Watching Movies";
 
 // 4. Change image source using querySelector + setAttribute
-let changeImgSource = document.querySelector("img");
-changeImgSource.setAttribute("src" , "replaced-pic.jpeg")
+let img = document.querySelector("img");
+img.setAttribute(
+  "src",
+  "https://images.unsplash.com/photo-1457449940276-e8deed18bfff?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+);
 
 // 5. Add a new class ("highlight") to all hobbies using querySelectorAll
-let newclass = document.querySelectorAll("li");
-newclass[0].setAttribute("class","highlight");
-newclass[1].setAttribute("class","highlight");
-newclass[2].setAttribute("class","highlight");
-// console.log(newclass[0].getAttribute("class"));
-// console.log(newclass[1].getAttribute("class"));
-// console.log(newclass[2].getAttribute("class"));
 
+let hobbies = document.querySelectorAll("li");
+hobbies[0].setAttribute("class", "highlight");
+hobbies[1].setAttribute("class", "highlight");
+hobbies[2].setAttribute("class", "highlight");
+
+console.log(hobbies[0].getAttribute("class"));
+console.log(hobbies[1].getAttribute("class"));
+console.log(hobbies[2].getAttribute("class"));
 
 // 6. Read image source using getAttribute and log it in console
-let readImgSource = document.getElementsByTagName("img");
-// readImgSource[0].getAttribute("src");
-console.log(readImgSource[0].getAttribute("src"));
+let imgsrc = document.getElementsByTagName("img");
+console.log(imgsrc[0].getAttribute("src"));
 
 // 7. Add alt text to image using setAttribute
-let addAltText = document.querySelector("img");
-addAltText.setAttribute("alt","profile-photo");
-// console.log(addAltText.getAttribute("alt"));
+let altText = document.querySelector("img");
+altText.setAttribute("alt", "profile-image");
+console.log(altText.getAttribute("alt"));
 
 // 8. BONUS: Use setAttribute("id", "highlighted") on the name span (or any element)
 //    This should apply the styles from style.css
-let nameStyle = document.querySelectorAll("p");
-nameStyle[1].setAttribute("id","highlighted");
-// console.log(nameStyle[0].getAttribute("id"));
+let highlightName = document.getElementsByClassName("username");
+highlightName[0].setAttribute("id", "highlighted");
+console.log(highlightName[0].getAttribute("id"));
+
 
 // ===============================
 // Part 4: Button Action (Optional)
+let button = document.getElementById("change-info");
+button.addEventListener("click", function () {
+  age.textContent = 24;
+  name[0].style.color = "blue";
+  changeHobby[0].innerText = "Traveling";
+  changeHobby[1].innerText = "Photography";
+  changeHobby[2].innerText = "Blogging";
+  img.setAttribute(
+    "src",
+    "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+  );
+  hobbies[0].setAttribute("class", "highlight");
+  hobbies[1].setAttribute("class", "highlight");
+  hobbies[2].setAttribute("class", "highlight");
+  altText.setAttribute("alt", "new-profile-image");
+  highlightName[0].setAttribute("id", "highlighted");
+});
 // ===============================
 // Make all the above changes happen
 // when clicking the "Change Info" button

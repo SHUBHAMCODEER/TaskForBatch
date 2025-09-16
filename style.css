@@ -15,19 +15,52 @@
 */
 
 /* Write your CSS here */
-/* 1. */
-.profile-card{
-   border: 5px dotted orange;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 1rem;
-   margin: 2rem;
+
+#highlighted {
+  list-style-type: none;
+  /* color: white;
+  background-color: #4CAF50;  */
+  font-size: 24px;
+  padding: 0px;
+  border-radius: 5px;
 }
 
-/* 2. */
-  #highlighted {
-     color:black;
-     background-color: orange;
-     font-size:medium;
-   }
+.profile-card {
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.profile-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-card p {
+  color: #555;
+  font-size: 16px;
+}
+.profile-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-card button{
+   border: none;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin-top: 15px;
+   border-radius: 5px;
+   cursor: pointer;
+}
