@@ -8,7 +8,7 @@ age.textContent = 23;
 
 // 2. Change name color using getElementsByClassName
 let name = document.getElementsByClassName("username");
-name[0].style.color = "blue";
+name[0].style.color = "red";
 
 // 3. Update all hobbies using getElementsByTagName
 let changeHobby = document.getElementsByTagName("li");
